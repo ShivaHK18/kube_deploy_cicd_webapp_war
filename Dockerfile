@@ -1,2 +1,3 @@
 FROM tomcat:9-jre9 
-COPY ./target/netflix.war /usr/local/tomcat/webapps
+MAINTAINER shivarajsoori@gmail.com
+COPY ./netflix.war /usr/local/tomcat/webapps
