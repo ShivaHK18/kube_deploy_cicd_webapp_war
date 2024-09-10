@@ -16,7 +16,7 @@ spec:
      spec:
       containers:
         - name: home
-          image: shivaraja385/webkube: v1.1
+          image: shivaraja385/webkube: latest
           imagePullPolicy: Always
           ports:
           - containerPort: 8090
