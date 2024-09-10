@@ -1,21 +1,12 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Service
 metadata:
-   name: flipkart
+  name: flipkartsignup
 spec:
-   replicas: 1
-   selector:
-    matchLabels:
-     name: deployment
-   template:
-     metadata:
-       name: shiva
-       labels:
-         name: deployment
-     spec:
-      containers:
-        - name: singup
-          image: shivaraja385/webkube:latest
-          imagePullPolicy: Always
-          ports:
-          - containerPort: 8000
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  selector:
+    name: deployment
+  type: LoadBalancer
