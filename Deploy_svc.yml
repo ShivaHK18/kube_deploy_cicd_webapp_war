@@ -12,26 +12,24 @@ spec:
     name: deployment
   type: LoadBalancer
 
-
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-   name: webapp
+  name: webapp
 spec:
-   replicas: 1
-   selector:
+  replicas: 1
+  selector:
     matchLabels:
-     name: deployment
-   template:
-     metadata:
-       name: shiva
-       labels:
-         name: deployment
-     spec:
+      name: deployment
+  template:
+    metadata:
+      labels:
+        name: deployment
+    spec:
       containers:
         - name: home
           image: shivaraja385/webkube:latest
           imagePullPolicy: Always
           ports:
-          - containerPort: 8090
+            - containerPort: 8090
