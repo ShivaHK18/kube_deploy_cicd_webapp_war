@@ -10,13 +10,12 @@ spec:
      name: deployment
    template:
      metadata:
-       name: shiva
-       labels:
+        labels:
          name: deployment
      spec:
       containers:
         - name: home
-          image: shivaraja385/webkube: v1.1
+          image: shivaraja385/webkube:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 8090
